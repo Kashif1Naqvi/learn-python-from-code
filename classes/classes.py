@@ -1,17 +1,17 @@
 
-# class myClass():
-#   def method1(self):
-#     print("Self can be use to manage the code")
-#   def method2(self,passstring):
-#     print("this is a string and the next string pass by user response"+" "+passstring)
+class myClass():
+  def method1(self):
+    print("Self can be use to manage the code")
+  def method2(self,passstring):
+    print("this is a string and the next string pass by user response"+" "+passstring)
 
-# def main():
-#   c = myClass()
-#   c.method1()
-#   c.method2("Dynamic String")
+def main():
+  c = myClass()
+  c.method1()
+  c.method2("Dynamic String")
 
-# if __name__ == "__main__":
-#   main()  
+if __name__ == "__main__":
+  main()  
 # ------------------------ONE CLASS INHERIT OTHER CLASS-----------------------
 
 #  important note i check it to try define function in class but show me this type of  error " Exception has occurred: TypeError
