@@ -1,8 +1,14 @@
 # learn-python-from-code
 Hello my name is syed kashif naqvi
-
-Code is art i learn from my art so i share my art with you all.
-
+Code is art i learn from my art,so i share my art with you all guys
 i make this chunks of code  for Beginners who like to learn from code.i learn from code a lot i think you all will be learn from it a lot.
+When I need to build a web app, I reach for the Python programming language. When I need to automate some small task on my system, I reach for Python. When I want to find the most common colors in an image, I reach for Python. When I… OK, I think you get the picture. Basically, when I need to code something and the language doesn’t matter,I  start Python  24 march 2019.So
+ that what is Python exactly?
+Python is a general purpose programming language created in the late 1980s, and named after Monty Python, that’s used by thousands of people to do things from testing microchips at Intel, to powering Instagram, to building video games with the PyGame library. It’s small, very closely resembles the English language, and has hundreds of existing third-party libraries.
+So what are the major reasons why I, personally, choose Python and recommend it to as many people as possible? It comes down to three reasons.
+Readability:
+Python very closely resembles the English language, using words like ‘not’ and ‘in’ to make it to where you can very often read a program, or script, aloud to someone else and not feel like you’re speaking some arcane language. This is also helped by Python’s very strict punctuation rules which means you don’t have curly braces ({ }) all over your code.
 
-Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales
+Also, Python has a set of rules, known as PEP 8, that tell every Python developer how to format their code. This means you always know where to put new lines and, more importantly, that pretty much every other Python script you pick up, whether it was written by a novice or a seasoned professional, will look very similar and be just as easy to read. The fact that my Python code, with five or so years of experience, looks very similar to the code that Guido van Rossum (the creator of Python) writes is such an ego boost.
+Libraries:
+Python has been around for over 20 years, so a lot of code written in Python has built up over the decades and, being an open source programming language, a lot of this has been released for others to use. Almost all of it is collected on https://pypi.python.org, pronounced “pie-pee-eye” or, more commonly called “the CheeseShop”.You can install this software on your system to be used by your own projects. For example, if you want to use Python to build scripts with commandline arguments, you’d install the “click” library and then import it into your scripts and use it. There are libraries for pretty much any use case you can come up with,from image manipulation, to scientific calculations, to server automation.
