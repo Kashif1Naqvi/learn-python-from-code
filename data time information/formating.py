@@ -27,6 +27,7 @@ def main():
   # DEFINE YEARS:21:38:37
 
   print(now.strftime("%c"))
-  
+  print(now.strftime("Current time is: %I:%M:%S:%p"))  
+  # I represent to Hours M represent to minitus S represent to seconds p represent to morning/evening
 if __name__ == "__main__":
     main() 
