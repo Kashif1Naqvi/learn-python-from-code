@@ -11,9 +11,12 @@ def main():
   # f.close()
 
 
-  f = open("code.txt","w+")
+  # for reading a file
 
-  f.write("code is art")
+  f = open("code.txt","r")
+  if f.mode == 'r':
+    contents = f.read()
+    print(contents)
   f.close()
 
 if __name__ == "__main__":
