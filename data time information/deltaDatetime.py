@@ -3,30 +3,30 @@ from datetime import time
 from datetime import datetime
 from datetime import timedelta
 
-# today = datetime.now()
+today = datetime.now()
 
-# print("Today date and time  is:",today)
+print("Today date and time  is:",today)
 
 # # output:Display the:Today date and time  is: 2019-03-29 14:20:37.251616
 
 
-# print(timedelta(days=365,hours=2, minutes=33))
+print(timedelta(days=365,hours=2, minutes=33))
 
 # # output:Displays the:365 days, 2:33:00
 
-# print("After 1 year and 3 weeks later date and time is:",(str(today + timedelta(days=365,weeks=3))))
+print("After 1 year and 3 weeks later date and time is:",(str(today + timedelta(days=365,weeks=3))))
 
 # # output will be:After 1 year and 3 weeks later date and time is: 2020-04-18 14:31:24.059720
 
-# print("Date and time of 3 days and 2 weeks ago will be:",str(today - timedelta(days=3,weeks=3) ))
+print("Date and time of 3 days and 2 weeks ago will be:",str(today - timedelta(days=3,weeks=3) ))
 
 # # output will be:Date and time of 3 days and 3 weeks will be: 2019-03-05 14:42:53.505785
 
 
 # # calculate the date 1 week ago ,formated as a string
 
-# t = today  +  timedelta(weeks=1)
-# print("the date is one week ago:",t.strftime("%A %B,%d %Y") )
+t = today  +  timedelta(weeks=1)
+print("the date is one week ago:",t.strftime("%A %B,%d %Y") )
 
 # # output:the date and time is one week ago: Friday April,05 2019
 
@@ -46,7 +46,7 @@ print("it's just",time_for_muharam.days,"days untile for muharam")
 # output:it's just 156 days untile for muharam
 
 
-#  my Birthday program
+#  my Brouther Syed Wajjhat naqvi Birthday program
 
 today = date.today()
 
@@ -57,3 +57,7 @@ if today < date_of_birth:
 
 time_for_syed_birthday = date_of_birth - today
 print("it's just",time_for_syed_birthday.days,"days remaining syed wajjhat birthday")
+
+
+
+
