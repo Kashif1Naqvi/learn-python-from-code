@@ -1,0 +1,92 @@
+
+ 
+Hello my name is syed kashif naqvi,In this example we're going to take what we learned in the previous video to see how to use 
+Python to connect to a real time JSON data feed out on the internet and process the information.
+JSON stands for the JavaScript object notation and you'll run into this a lot when you're working with data 
+from various different sources on the internet.
+The data feed that we're going to be using is the US Geological Surveys earthquakes data feed 
+and I have their home page open here.
+You can see that the earthquake data feed is provided by the USGS and they provide a variety of formats.
+So they have ATOM, and they've got Google Earth KML. 
+They provide some JSON and if you click on this link here the GeoJSON Summary it takes you to this page and 
+this page describes the format of the JavaScript object notation that comes back from that data feed. So we're going to be using this feed to get information about current earthquakes all around the world. Let's go over to the code, and in chapter five let's start by opening up JSON data underscore start and let's scroll down to the main function.
+Now, I've already defined the main function and I've got a variable here named URL data and web URL and this 
+might look familiar to you if you've seen the previous video. Now in order to process JSON I have to import
+ the correct module which is the JSON module. So let's go ahead and do that. Up here at the top I'll write
+  import in JSON. All right. Back down to the main function. So the data feed that my URL data variable is 
+  pointing to is a URL that the US Geological Survey uses to deliver JSON data for all earthquakes within
+   the last day that have a magnitude of 2.5 or larger.
+So just like in the previous example I have this web URL variable and I'm calling the URL open function on
+ this URL to get the data. So first I'm going to print out the result code to make sure that we're getting a 
+ result of 200 and again that's an HTTP response code and if the code comes back as 200 then we're going to
+  read the data from the URL. So this will retrieve the JSON data and we're going to write a function named 
+  print results which will print out our customized results.
+So let's go ahead and do that. So if the web URLs get code response is equal to 200 then I'll have a variable
+ named data and we'll just simply read the contents of the URL and then we'll call our print results function
+  and we'll pass in the data. Otherwise, we'll simply receive an error code and I'll just write received error,
+   cannot parse results.
+All right. Now, let's go take a look at the print results function which is up here. So this function takes 
+an argument named data which is the JSON string that was read in earlier in the main function and
+ I've already written this line of code here that calls the load S function on the JSON class and 
+ assigns the result to a variable named the JSON. The load S function takes a string of JSON and parses 
+ it into a native Python object.
+So once we've done that we can access that object like we would any other Python object. For example,
+ according to the GeoJSON spec, and let's take a look at that really quick, 
+ here in the JSON spec there's a property named title which is right here in the meta data section.
+  So, let's write the code to print that title out.
+   So, if title is in the JSON, and the section we're interested in is the meta data section,
+    I'm accessing this object like a dictionary object.
+So I'll print the JSON and it's the meta data title.
+ So also within the meta data section, let's go back, also within the meta data section 
+ it looks like there's a count property right here, which tells us how many earthquakes there have been.
+  Let's print that out as well. So, I'll write count equals JSON and once again meta data and 
+  what we want this time is the count and we'll print, cast this to a string, events recorded, there we go.
+All right so let's save and let's run what we have so far. So I'll go to the debugger and
+ I know I've said this a few times now but remember if you're not using VS Code you can just go to the 
+ terminal and run this using the Python command. So I'll bring up the output window and I'll run this and
+  you can see that the result code is 200. So we were able to access the URL and we can also see that there 
+  are 25 events recorded and this is the title that came back from the title field.
+So USGS magnitude 2.5 plus earthquakes in the past day and there's been 25 of them.
+ So, all right, we're making good progress. Let's print out some of the details from the earthquake 
+ data structure. So, if we go back to the specification for the GeoJSON data, we can see that there's a 
+ property named features. So this object is an array of objects that describe each earthquake event. 
+ So, let's write some code that prints out the place where each of the earthquakes occurred, and you 
+ can see that there's a place property right here that is a string.
+So, we'll go back to the code, and I'm going to use a for loop for this. So I'll write for I in the JSON 
+and I'm going to loop over that array of features. Remember that's a JavaScript array, and I'm going to 
+print I sub properties and in particular the place, and then below that I'll just print out a little
+ separating line so that we can separate this from other results. So just a quick recap, let's go back there.
+You can see that there's an array of objects and then there's a properties object in there and then inside the
+ properties object I'm going to print out the place. So let's run that. So we'll save and we'll run.
+  And now you can see I'm getting a list of all the places where these various earthquakes occurred, 
+  and you can see that they're happening all over the world, okay? So now let's print out a list of quakes 
+  that have a magnitude of four or greater, and to do this we're going to use the magnitude property of each
+   event.
+So again, if we look you can see that there's a mag right here that indicates the magnitude. Let's write
+ some code. It's going to be very similar to what we just did. So, I'll write for I in the JSON and in this 
+ case once again we're going to loop over the features and if I sub properties and we want the magnitude 
+ property is greater than or equal to 4.0 then we're going to print a string.
+I'm going to use some string formatting here. I'm going to use percent 2.1 F. That formats a decimal
+ with 2.1 spaces. So two significant digits and one decimal digit and I'm going to combine that with my 
+ I sub properties, I mean, magnitude, and I'm going to print also the I sub properties place, all right? 
+ And then once again, print a dividing line to separate the results.
+All right, so once again let's save and run. Let's clear out the existing output.
+ And now you can see here that we're getting a list of 4.0 quakes or greater. 
+ So the list is smaller, and here on the left we're printing out the magnitude 
+ along with the place. All right, so for the last example let's print a list of 
+ events where at least one person reported feeling something. If we go back to the
+  spec, you can see that there's a felt property right here.
+This is the number of people that reported feeling that particular event. So let's 
+go back and let's write the code. So, we're going to print out events that were felt 
+and then once again we're going to loop over the JSON. So I'll just copy and paste that 
+line and we're going to say felt reports equals and then I sub properties and that's
+ going to be the felt and if felt reports is not none and I'm going to check see if 
+ felt reports is greater than zero, so at least one person reported feeling something,
+  we'll print pretty much the same thing that we printed before.
+So we'll use this print statement here and in addition to the place we're also going 
+to print how many people reported it. So we'll say reported along with a string value 
+of felt reports plus the word times. All right, so, let's clear out this data and run it.
+ All right, and you can see that the events that were felt and now we're getting the magnitude,
+  the place, and the number of times that at least one person reported feeling something.
+
+You can see that using Python to retrieve JSON data from the internet and manipulate and process it is really easy. To learn more about the JSON handling features of Python go ahead and visit this URL in the Python documentation which covers the documentation for the JSON class.
